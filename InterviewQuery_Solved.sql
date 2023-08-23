@@ -2,23 +2,6 @@
 /* Different way to find the Duplicate Records*/
 /*================================================*/   
 
-/*Creating sample table Employee
-
-CREATE TABLE Employee
-(
-[ID] INT identity(1,1),
-[FirstName] Varchar(100),
-[LastName] Varchar(100),
-[Country] Varchar(100),
-)
-GO
-Insert into Employee ([FirstName],[LastName],[Country] )values('Raj','Gupta','India'),
-('Raj','Gupta','India'),
-('Mohan','Kumar','USA'),
-('James','Barry','UK'),
-('James','Barry','UK'),
-('James','Barry','UK')
-*/
 
 Select * from Employee
 
@@ -47,30 +30,6 @@ AS (Select emp.FirstName, emp.LastName, emp.Country, ROW_NUMBER() over (partitio
 
 Select * from CTE
 
-
-
---RANK(), DENSE_RANK(), ROW_NUMBER() diffrence
-
---CREATE TABLE RankEmployees (
---  id integer,
---  first_name varchar(20),
---  last_name varchar(20),
---  position varchar(20),
---  salary varchar(20)
---)
-
---INSERT INTO RankEmployees VALUES 
---(1, 'Andrew', 'Brown', 'Manager', 100000),
---(2, 'Maria', 'Johnson', 'Manager', 105000),
---(3, 'John', 'Anderson', 'Senior Manager', 130000),
---(4, 'Alex', 'Purple', 'Associate', 50000),
---(5, 'George', 'Bull', 'Senior Associate', 65000),
---(6, 'Jess', 'Fridman', 'Associate', 48000),
---(7, 'Marion', 'White', 'Senior Associate', 65000),
---(8, 'Andreea', 'Berton', 'Manager', 102000),
---(9, 'Bob', 'Johanson', 'Associate', 45000),
---(10, 'Georgia', 'Hoffman', 'Senior Associate', 66000),
---(11, 'Johan', 'Peterson', 'Senior Associate', 58000);
 
 Select * from RankEmployees
 
