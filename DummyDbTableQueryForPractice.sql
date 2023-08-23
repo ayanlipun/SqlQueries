@@ -161,3 +161,97 @@ Insert into Employee ([FirstName],[LastName],[Country] )values('Raj','Gupta','In
 ('James','Barry','UK'),
 ('James','Barry','UK')
 */
+
+
+/*
+Creaeting tavble for between operation test
+
+CREATE TABLE EmpBetweeExample(
+    EmpID INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Country VARCHAR(50),
+    Age int,
+    Salary int
+);
+-- Insert some sample data into the Customers table
+INSERT INTO EmpBetweeExample (EmpID, Name,Country, Age, Salary)
+VALUES (1, 'Shubham',  'India','23','30000'),
+       (2, 'Aman ',  'Australia','21','45000'),
+       (3, 'Naveen', 'Sri lanka','24','40000'),
+       (4, 'Aditya',  'Austria','21','35000'),
+       (5, 'Nishant', 'Spain','22','25000'); 
+
+*/
+ 
+/*
+--  Created for Union test
+
+CREATE TABLE Old_EmployeeUnion
+(  
+Employee_Id INT NOT NULL,   
+Employee_Name Varchar (40),  
+Emp_Age INT,  
+Emp_Salary INT  
+);
+
+INSERT INTO Old_EmployeeUnion(Employee_Name,Emp_Age, Emp_Salary) values
+(1,'Akh', 28, 25000),  
+(2,'Abh', 27, 26000),  
+('Sor', 26, 29000),  
+('Abh', 27, 26000),  
+('Rit', 26, 29000),  
+('Yas', 29, 28000)  
+
+CREATE TABLE New_EmployeeUnion
+(  
+Employee_Id INT NOT NULL,   
+Employee_Name Varchar (400),  
+Emp_Age INT,  
+Emp_Salary INT  
+); 
+
+INSERT INTO New_EmployeeUnion (Employee_Id, Employee_Name, Emp_Age, Emp_Salary) VALUES (201, Jack, 28, 45000),  
+(202, 'Berry', 29, 35000),  
+(105, 'Ritik', 26, 29000),  
+(203, 'Shyam', 27, 26000),  
+(204, 'Ritika', 28, 38000),  
+(106, 'Yash', 29, 28000);
+
+*/
+
+
+/* 
+-- Created for merge test
+    
+CREATE TABLE SourceProducts(
+    ProductID		INT,
+    ProductName		VARCHAR(50),
+    Price			DECIMAL(9,2)
+)
+GO
+    
+INSERT INTO SourceProducts(ProductID,ProductName, Price) VALUES(1,'Table',100)
+INSERT INTO SourceProducts(ProductID,ProductName, Price) VALUES(2,'Desk',80)
+INSERT INTO SourceProducts(ProductID,ProductName, Price) VALUES(3,'Chair',50)
+INSERT INTO SourceProducts(ProductID,ProductName, Price) VALUES(4,'Computer',300)
+GO
+    
+CREATE TABLE TargetProducts(
+    ProductID		INT,
+    ProductName		VARCHAR(50),
+    Price			DECIMAL(9,2)
+)
+GO
+    
+INSERT INTO TargetProducts(ProductID,ProductName, Price) VALUES(1,'Table',100)
+INSERT INTO TargetProducts(ProductID,ProductName, Price) VALUES(2,'Desk',180)
+INSERT INTO TargetProducts(ProductID,ProductName, Price) VALUES(5,'Bed',50)
+INSERT INTO TargetProducts(ProductID,ProductName, Price) VALUES(6,'Cupboard',300)
+GO
+    
+    
+SELECT * FROM SourceProducts
+SELECT * FROM TargetProducts
+
+
+*/

@@ -48,3 +48,27 @@ FROM
   ROW_NUMBER() OVER (PARTITION BY position  ORDER BY salary DESC) AS emp_pos_rank
 FROM 
   RankEmployees;
+
+
+ Select * from EmpBetweeExample; 
+
+
+ Select * from EmpBetweeExample 
+ where salary between 30000 AND 43000
+
+
+ Select * from Old_EmployeeUnion
+
+
+ --  Merge Statement query
+
+SELECT * FROM SourceProducts
+SELECT * FROM TargetProducts
+
+Merge TargetProducts As Target
+Using SourceProducts As Source
+on Source.ProdcutId  = Target.ProductId
+when not matched by Target then 
+insert( 
+
+
